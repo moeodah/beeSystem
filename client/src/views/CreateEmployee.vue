@@ -127,11 +127,11 @@
         submit
       </v-btn>
     </router-link>
-    <v-btn
+    <!-- <v-btn
       @click="clear"
     >
       clear
-    </v-btn>
+    </v-btn> -->
   </form>
 </template>
 <script>
@@ -184,7 +184,7 @@
     methods: {
       async submit () {
         try {
-          const response = await EmployeeServices.post({
+          await EmployeeServices.post({
             name: this.name,
             gender: this.gender,
             education: this.education,
@@ -213,31 +213,31 @@
 
         }
       },
-      clear () {
-        this.name = '',
-        this.gender = null,
-        this.education = null,
-        this.email1 = '',
-        this.email2 = '',
-        this.phoneNumber1 = '',
-        this.phoneNumber2 = '',
-        this.address1 = '',
-        this.address2 = '',
-        this.civilId = '',
-        this.civilIdExpiry = '',
-        this.DOB = '',
-        this.driverLicenseExpiry = '',
-        this.passportId = '',
-        this.passportIdExpiry = '',
-        this.jobTitle = '',
-        this.dateOfHire = '',
-        this.bankAccountNumber = '',
-        this.Iban = '',
-        this.bankName = '',
-        this.salary = '',
-        this.Martial = null,
-        this.nationality = null
-      },
+      // clear () {
+      //   this.name = '',
+      //   this.gender = null,
+      //   this.education = null,
+      //   this.email1 = '',
+      //   this.email2 = '',
+      //   this.phoneNumber1 = '',
+      //   this.phoneNumber2 = '',
+      //   this.address1 = '',
+      //   this.address2 = '',
+      //   this.civilId = '',
+      //   this.civilIdExpiry = '',
+      //   this.DOB = '',
+      //   this.driverLicenseExpiry = '',
+      //   this.passportId = '',
+      //   this.passportIdExpiry = '',
+      //   this.jobTitle = '',
+      //   this.dateOfHire = '',
+      //   this.bankAccountNumber = '',
+      //   this.Iban = '',
+      //   this.bankName = '',
+      //   this.salary = '',
+      //   this.Martial = null,
+      //   this.nationality = null
+      // },
     },
   }
 </script>
